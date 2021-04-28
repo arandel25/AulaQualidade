@@ -15,8 +15,8 @@ public class TestarNavegadorStep {
 
     @Então("o navegador Google Chrome deve abrir")
     public void o_navegador_Google_Chrome_deve_abrir() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        componentes.navegadorChrome();
+        componentes.fechaNavegador();
     }
 
 }
