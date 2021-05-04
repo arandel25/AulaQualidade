@@ -14,8 +14,8 @@ public class ComponentesStep {
         componentes.inicializa();
     }
 
-    @Quando("que o usuário digitar Batatinha")
-    public void que_o_usuário_digitar_Batatinha() {
+    @Quando("o usuário digitar Batatinha no campo textfield")
+    public void o_usuário_digitar_Batatinha_no_campo_textfield() {
         componentes.testeTextField();
     }
 
@@ -23,5 +23,16 @@ public class ComponentesStep {
     public void o_resultado_do_campo_textfield_deve_ser_Batatinha() {
         componentes.validaTextField();
         componentes.fechaNavegador();
+    }
+
+    @Quando("o usuário digitar Batatinha Batatinha{int} no campo textarea")
+    public void o_usuário_digitar_Batatinha_Batatinha_no_campo_textarea(Integer int1) {
+        componentes.testeTextArea();
+    }
+
+    @Então("o resultado do campo textarea deve ser Batatinha Batatinha{int}")
+    public void o_resultado_do_campo_textarea_deve_ser_Batatinha_Batatinha(Integer int1) {
+        componentes.validaTextArea();
+//        componentes.fechaNavegador();
     }
 }
