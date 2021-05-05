@@ -15,3 +15,16 @@ Funcionalidade: Acessar vários componentes html
       | texto                | campo     |
       | Batatinha            | textfield |
       | Batatinha Batatinha2 | textarea  |
+
+
+  Esquema do Cenário: Validar radiobutton "Sexo" e ckeckbox "comida favorita"
+    Quando o usuário selecionar <componente> <nome>
+    Então o <componente> <nome> deve está selecionado
+    Exemplos:
+      | componente  | nome        |
+      | radiobutton | Masculino   |
+      | radiobutton | Feminino    |
+      | checkbox    | Carne       |
+      | checkbox    | Frango      |
+      | checkbox    | Pizza       |
+      | checkbox    | Vegetariano |

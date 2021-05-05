@@ -41,4 +41,20 @@ public class Componentes {
         Assert.assertEquals("Batatinha\nBatatinha2", driver.findElement(By.id("elementosForm:sugestoes"))
                 .getAttribute("value"));
     }
+
+    public void testeRadioButton(int campo) {
+        driver.findElement(By.id("elementosForm:sexo:" + campo)).click();
+    }
+
+    public void validaRadioButton(int campo) {
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:" + campo)).isSelected());
+    }
+
+    public void testeCheckBox(int campo) {
+        driver.findElement(By.id("elementosForm:comidaFavorita:" + campo)).click();
+    }
+
+    public void validaCheckBox(int campo) {
+        Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:" + campo)).isSelected());
+    }
 }

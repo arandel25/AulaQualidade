@@ -5,7 +5,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/features/Componentes.feature", glue = "")
+@CucumberOptions(features = "src/features/Componentes.feature", glue = "", tags = "")
 public class TestRunner {
 
 }
