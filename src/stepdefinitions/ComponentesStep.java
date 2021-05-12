@@ -103,4 +103,35 @@ public class ComponentesStep {
         componentes.fechaNavegador();
     }
 
+    @Quando("o usuário selecionar um valor no elemento combo")
+    public void o_usuário_selecionar_um_valor_no_elemento_combo() {
+        componentes.selecionarValorCombobox();
+    }
+
+    @Então("o valor deve aparecer selecionado")
+    public void o_valor_deve_aparecer_selecionado() {
+        componentes.validaValorComboBox();
+        componentes.fechaNavegador();
+    }
+
+    @Quando("o usário clicar no elemento combobox")
+    public void o_usário_clicar_no_elemento_combobox() {
+        componentes.selecionaTodosElementosComboBox();
+    }
+
+    @Então("a quantidade de opções tem que ser oito")
+    public void a_quantidade_de_opções_tem_que_ser_oito() {
+        componentes.validaQuatidadeOpcoesCombo();
+        componentes.fechaNavegador();
+    }
+
+    @Quando("o usuário selecionar a opção Mestrado na combobox")
+    public void o_usuário_selecionar_a_opção_Mestrado_na_combobox() {
+        componentes.selecionaMestrado();
+    }
+
+    @Então("Mestrado deve aparecer selecionado")
+    public void mestrado_deve_aparecer_selecionado() {
+        componentes.validaMestradoSelecionado();
+    }
 }

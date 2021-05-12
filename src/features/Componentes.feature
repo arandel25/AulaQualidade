@@ -28,3 +28,18 @@ Funcionalidade: Acessar vários componentes html
       | checkbox    | Frango      |
       | checkbox    | Pizza       |
       | checkbox    | Vegetariano |
+
+  @validar_elemento_combobox_escolaridade
+  Cenário: Validar elemento combobox escolaridade
+    Quando o usuário selecionar um valor no elemento combo
+    Então o valor deve aparecer selecionado
+
+  @validar_quantidade_de_opções_na_combobox
+  Cenário: Validar quantidade de opções na combobox
+    Quando o usário clicar no elemento combobox
+    Então a quantidade de opções tem que ser oito
+
+  @validar_opção_Mestrado_selecionado_na_combobox
+  Cenário: Validar opção Mestrado selecionado na combobox
+    Quando  o usuário selecionar a opção Mestrado na combobox
+    Então Mestrado deve aparecer selecionado
