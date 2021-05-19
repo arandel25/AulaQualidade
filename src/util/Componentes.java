@@ -1,6 +1,7 @@
 package util;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,8 @@ public class Componentes {
 
     private WebDriver driver;
     private Select combo;
+    private WebElement botao;
+    private Alert alert;
 
     public void inicializa() {
         String chromeDriver = System.getProperty("user.dir") + "/drivers/chromedriver.exe";
@@ -97,5 +100,62 @@ public class Componentes {
             break;
         }
         Assert.assertEquals(encontrou, combo.getFirstSelectedOption().getText());
+    }
+
+    public void selecionarValorComboMultiplo() {
+        WebElement elemento = driver.findElement(By.id("elementosForm:esportes"));
+        combo = new Select(elemento);
+        combo.selectByVisibleText("O que eh esporte?");
+    }
+
+    public void validaValorComboMultiplo() {
+        List<WebElement> allSelectOptions = combo.getAllSelectedOptions();
+        Assert.assertEquals(1, allSelectOptions.size());
+    }
+
+    public void clicarBotaoSimples() {
+        botao = driver.findElement(By.id("buttonSimple"));
+        botao.click();
+    }
+
+    public void validarBotaoSimples() {
+        Assert.assertEquals("Obrigado!", botao.getAttribute("value"));
+    }
+
+    public void clicarBotaoAlert() {
+        driver.findElement(By.id("alert")).click();
+    }
+
+    public void validarCliqueAlertSimples() {
+        Alert alert = driver.switchTo().alert();
+        Assert.assertEquals("Alert Simples", alert.getText());
+    }
+
+    public void clicarBotaoConfirm() {
+        botao = driver.findElement(By.id("confirm"));
+        botao.click();
+    }
+
+    public void validarBotaoConfirm() {
+        alert = driver.switchTo().alert();
+        Assert.assertEquals("Confirm Simples", alert.getText());
+    }
+
+    public void clicarBotaoOk() {
+        alert.accept();
+    }
+
+    public void validarBotaoOk() {
+        alert = driver.switchTo().alert();
+        Assert.assertEquals("Confirmado", alert.getText());
+    }
+
+    public void clicarBotaoCancelar(){
+        alert.dismiss();
+    }
+
+    public void validarBotaoCancelar(){
+        alert = driver.switchTo().alert();
+        Assert.assertEquals("Negado", alert.getText());
     }
 }

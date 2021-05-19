@@ -127,15 +127,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Documents/Bibliotecas_2021_1/selenium-server-standalone-3.141.59.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$USER_HOME$/Documents/Bibliotecas_2021_1/tag-expressions-1.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -160,6 +151,15 @@
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="jar://$USER_HOME$/Documents/Bibliotecas_2021_1/selenium-java-3.141.59.jar!/" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Documents/Bibliotecas_2021_1/selenium-server-standalone-3.141.59.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

@@ -134,4 +134,69 @@ public class ComponentesStep {
     public void mestrado_deve_aparecer_selecionado() {
         componentes.validaMestradoSelecionado();
     }
+
+    @Quando("o usuário selecionar um valor no elemento campo de múltipla escolha")
+    public void o_usuário_selecionar_um_valor_no_elemento_campo_de_múltipla_escolha() {
+        componentes.selecionarValorComboMultiplo();
+    }
+
+    @Então("o valor deve aparecer selecionado no elemento combobox de múltipla escolha")
+    public void o_valor_deve_aparecer_selecionado_no_elemento_combobox_de_múltipla_escolha() {
+        componentes.validaValorComboMultiplo();
+        componentes.fechaNavegador();
+    }
+
+    @Quando("o usuário clicar no botão Clique me")
+    public void o_usuário_clicar_no_botão_Clique_me() {
+        componentes.clicarBotaoSimples();
+    }
+
+    @Então("o nome do botão deve ser alterado para Obrigado")
+    public void o_nome_do_botão_deve_ser_alterado_para_Obrigado() {
+        componentes.validarBotaoSimples();
+        componentes.fechaNavegador();
+    }
+
+    @Quando("o usuário clicar no botão Alert")
+    public void o_usuário_clicar_no_botão_Alert() {
+        componentes.clicarBotaoAlert();
+    }
+
+    @Então("deve aparecer a mensagem de feedback Alert Simples")
+    public void deve_aparecer_a_mensagem_de_feedback_Alert_Simples() {
+        componentes.validarCliqueAlertSimples();
+        componentes.fechaNavegador();
+    }
+
+    @Quando("o usuário clicar no botão Confirm")
+    public void o_usuário_clicar_no_botão_Confirm() {
+        componentes.clicarBotaoConfirm();
+    }
+
+    @Quando("aparecer a mensagem Confirm Simples")
+    public void aparecer_a_mensagem_Confirm_Simples() {
+        componentes.validarBotaoConfirm();
+    }
+
+    @Quando("clicar no botão OK")
+    public void clicar_no_botão_OK() {
+        componentes.clicarBotaoOk();
+    }
+
+    @Então("deve aparecer a mensagem de feedback Confirmado")
+    public void deve_aparecer_a_mensagem_de_feedback_Confirmado() {
+        componentes.validarBotaoOk();
+        componentes.fechaNavegador();
+    }
+
+    @Quando("clicar no botão Cancelar")
+    public void clicar_no_botão_Cancelar() {
+        componentes.clicarBotaoCancelar();
+    }
+
+    @Então("deve aparecer a mensagem de feedback Negado")
+    public void deve_aparecer_a_mensagem_de_feedback_Negado() {
+        componentes.validarBotaoCancelar();
+        componentes.fechaNavegador();
+    }
 }
